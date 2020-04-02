@@ -1,0 +1,215 @@
+body {
+  font-family: Roboto, sans-serif;
+  background-color: #fafafa;
+  margin: 0;
+}
+main {
+  max-width: 975px;
+  margin: auto;
+}
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 25px 0px 25px 0px;
+  margin: 0;
+  background-color: #ffffff;
+  border-bottom: 1px solid;
+  border-color: #dbdbdb;
+}
+nav ul {
+  display: flex;
+  list-style-type: none;
+}
+.navbar li img {
+  padding: 0px 17px 0px 17px;
+  vertical-align: text-top;
+}
+.navbar #searchbox {
+  background: #fafafa;
+  border: 1px solid #dbdbdb;
+  height: 28px;
+  width: 215px;
+  border-radius: 3px;
+  text-align: center;
+  font-size: 13px;
+  line-height: 18px;
+}
+.navbar button {
+  font-size: 14px;
+  line-height: 18px;
+  color: #ffffff;
+  background-color: #3897f0;
+  border-radius: 4px;
+  padding: 5px 10px 7px 10px;
+}
+.navbar a {
+  font-size: 14px;
+  line-height: 28px;
+  text-decoration: none;
+  color: #3897f0;
+  padding-left: 14px;
+}
+
+.grid-container {
+  margin-top: 57px;
+  display: grid;
+  grid-template-columns: 350px 1fr;
+  grid-template-rows: repeat(4, minmax(24px, auto));
+  grid-template-areas:
+    "logo title "
+    "logo statistics"
+    "logo description"
+    "reel reel";
+}
+.logo {
+  grid-area: logo;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.statistics {
+  grid-area: statistics;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  width: 328px;
+}
+.description {
+  grid-area: description;
+}
+.proof {
+  grid-area: reel;
+  margin-top: 54px;
+  background: #3897f0;
+}
+
+.header-info {
+  grid-area: title;
+  display: flex;
+  /* padding: 0px 0px 0px 51px;
+  margin-top: 57px; */
+}
+.header-info h1 {
+  font-size: 26px;
+  line-height: 32px;
+  color: #262626;
+  margin: 0;
+}
+
+.statistics li {
+  list-style-type: none;
+  font-size: 16px;
+  line-height: 18px;
+  color: #262626;
+  margin: 0;
+  padding: 19px 0px 20px 0px;
+}
+.description h3 {
+  font-size: 16px;
+  line-height: 24px;
+  color: #262626;
+  margin: 0;
+}
+.description p {
+  font-size: 15px;
+  line-height: 24px;
+  color: #262626;
+  margin: 0;
+}
+.description a {
+  font-size: 16px;
+  line-height: 24px;
+  text-decoration: none;
+  color: #003569;
+  margin: 0;
+}
+.header-info button {
+  font-size: 14px;
+  color: #ffffff;
+  background-color: #3897f0;
+  border-radius: 4px;
+  padding: 6px 10px;
+  bottom: 10px;
+  height: 30px;
+  width: 61px;
+  margin-left: 45px;
+}
+
+/* responsiveness phone */
+@media screen and (max-width: 1025px) {
+  /* body {
+    background-color: #d0da9c;
+  } */
+  .grid-container {
+    margin-top: 21pxx;
+    grid-template-columns: 121px 1fr;
+    grid-template-rows: repeat(4, minmax(77px, auto));
+    grid-template-areas:
+      "logo title "
+      "description description"
+      "reel reel"
+      "statistics statistics";
+  }
+
+  .header-info {
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+  }
+  .header-info h1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .header-info button {
+    font-size: 14px;
+    color: #ffffff;
+    background-color: #3897f0;
+    border-radius: 4px;
+    padding: 6px 10px;
+    margin: 7px 0px 0px 0px;
+    height: 30px;
+    width: 61px;
+  }
+  .logo img {
+    float: left;
+    height: 77px;
+    width: 77px;
+  }
+  .logo h3,
+  p,
+  a {
+    font-size: 14px;
+    line-height: 20px;
+    color: #003569;
+  }
+  .description {
+    margin-top: 24px;
+    margin-left: 16px;
+  }
+  .navbar #searchbox {
+    display: none;
+  }
+  .proof {
+    margin-top: 26px;
+  }
+  .statistics {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    border-top: 1px solid #dbdbdb;
+    border-bottom: 1px solid #dbdbdb;
+  }
+  .statistics li {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+  }
+  .statistics li span {
+    font-size: 13px;
+    line-height: 18px;
+    color: #999999;
+  }
+}
